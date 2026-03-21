@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelets Hello Greeting</title>
+    </h:head>
+    <h:body>
+
+        <div class="card">
+            <p:panelGrid columns="2">
+                <p:avatar icon="pi pi-user" styleClass="mr-2" size="xlarge" shape="circle" />
+                Fundamentos de Programación Orientada a Eventos <br />
+                Página de Prueba
+            </p:panelGrid>
+            
+            <p>Usuario conectado : #{request.remoteUser == null ? "Unauthenticated User" : request.remoteUser }</p>
+            <p>Direcci&oacute;n de conexi&oacute;n : #{request.remoteAddr} </p>
+
+
+            <p>Si después de ejecutar la aplicación usted ve una página similar a la mostrada en la guía es porque
+                PrimeFaces configurado Satisfactoriamente</p>
+
+
+        </div>
+
+    </h:body>
+</html>
+
+
