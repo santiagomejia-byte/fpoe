@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="jakarta.faces.core">
+    
+    <h:head>
+        <title>Facelets Hello Greeting</title>
+    </h:head>
+    
+    <h:body>
+        <h:form>
+            <p:card style="width: 35rem; margin-bottom: 2em">
+                
+                <f:facet name="title">Gestionar Asignaturas</f:facet>
+        
+                <h:panelGrid columns="3">
+                    <p:outputLabel for="txfCodigo" value="Codigo : " />
+                    <p:inputText id="txfCodigo"/>
+                    <p:message for="txfCodigo"/>
+                
+                    <p:outputLabel for="txfNombre" value="Nombre : " />
+                    <p:inputText id="txfNombre"/>
+                    <p:message for="txfNombre"/>
+                
+                    <p:outputLabel for="txfCreditos" value="Créditos : " /> 
+                    <p:inputText id="txfCreditos"/>
+                    <p:message for="txfCreditos"/>
+                
+                    <p:outputLabel for="txfIntensidad" value="Intensidad : " /> 
+                    <p:inputText id="txfIntensidad"/>
+                    <p:message for="txfIntensidad"/>
+                </h:panelGrid>
+        
+                <f:facet name="footer">
+                    <p:commandButton icon="pi pi-check" value="Save"/>
+                    <p:commandButton icon="pi pi-times" value="Cancel"
+                                     styleClass="ui-button-secondary"
+                                     style="margin-left: .5em"/>
+                </f:facet> <!-- 👈 ESTE FALTABA -->
+
+            </p:card>
+        </h:form>
+    </h:body>
+</html>

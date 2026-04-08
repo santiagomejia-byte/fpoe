@@ -33,7 +33,7 @@
      Especificación de la página inicial de la aplicaci{on
     -->
     <welcome-file-list>
-        <welcome-file>index.xhtml</welcome-file>
+        <welcome-file>asignaturas.xhtml</welcome-file>
     </welcome-file-list>
     <!--
     -->
