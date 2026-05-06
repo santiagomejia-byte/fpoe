@@ -8,6 +8,6 @@ repositories {
 
 dependencies {
     providedCompile 'jakarta.platform:jakarta.jakartaee-web-api:11.0.0'
-    implementation 'org.primefaces:primefaces:12.0.0:jakarta'
+    implementation 'org.primefaces:primefaces:12.0.12-LTS:jakarta'
     testImplementation     'junit:junit:4.13'
 }
