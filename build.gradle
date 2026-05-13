@@ -10,4 +10,11 @@ dependencies {
     providedCompile 'jakarta.platform:jakarta.jakartaee-web-api:11.0.0'
     implementation 'org.primefaces:primefaces:12.0.12-LTS:jakarta'
     testImplementation     'junit:junit:4.13'
+
+
+    // Source: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
+implementation("com.mysql:mysql-connector-j:9.7.0")
+
+    // Source: https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa
+implementation("org.eclipse.persistence:org.eclipse.persistence.jpa:4.0.8")
 }
