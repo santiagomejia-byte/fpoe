@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="co.edu.uvapalmira.fpoe.persistencia.AsignaturaDAOTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-05-20T22:44:26" hostname="PAL-53990044" time="1.515">
+<testsuite name="co.edu.uvapalmira.fpoe.persistencia.AsignaturaDAOTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-05-20T23:01:56" hostname="PAL-53990044" time="1.557">
   <properties/>
-  <testcase name="test" classname="co.edu.uvapalmira.fpoe.persistencia.AsignaturaDAOTest" time="1.515"/>
-  <system-out><![CDATA[[EL Info]: 2026-05-20 17:44:27.019--ServerSession(1042772649)--EclipseLink, version: Eclipse Persistence Services - 4.0.8.v202509250753-f4449e70fdbe80ebeabd5e04bd3ad95033bf75b6
+  <testcase name="test" classname="co.edu.uvapalmira.fpoe.persistencia.AsignaturaDAOTest" time="1.557"/>
+  <system-out><![CDATA[[EL Info]: 2026-05-20 18:01:56.888--ServerSession(45207973)--EclipseLink, version: Eclipse Persistence Services - 4.0.8.v202509250753-f4449e70fdbe80ebeabd5e04bd3ad95033bf75b6
 Insertar
 1
+Buscar
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

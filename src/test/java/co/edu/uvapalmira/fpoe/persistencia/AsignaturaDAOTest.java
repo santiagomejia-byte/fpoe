@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -38,6 +39,21 @@ public class AsignaturaDAOTest {
             asignaturaDAO.create(asig);
             this.id = asig.getId();
             System.out.println(this.id);
+            Assert.assertNotNull(asig.getId());
+            
+            System.out.println("Buscar");
+            asig= null;
+            asig= asignaturaDAO.buscarPorCodigo("750014C");
+            Assert.assertEquals("FPOE", asig.getNombre());
+            
+            asig.setNombre("Fund. Prog. O. Eventos");
+            this.asignaturaDAO.edit(asig);
+            
+            asig= asignaturaDAO.buscarPorCodigo("750014C");
+            Assert.assertEquals("Fund. Prog. O. Eventos", asig.getNombre());
+            
+            
+            
         } catch (Exception ex) {
             Logger.getLogger(AsignaturaDAOTest.class.getName()).log(Level.SEVERE, null, ex);
             fail();
