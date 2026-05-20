@@ -4,10 +4,13 @@
  */
 package co.edu.uvapalmira.fpoe.modelo;
 
+import co.edu.uvpalmira.fpoe.jpalib.AbstractEntity;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.inject.Named;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.NamedQueries;
+import jakarta.persistence.NamedQuery;
 import java.io.Serializable;
 
 /**
@@ -15,12 +18,27 @@ import java.io.Serializable;
  * @author Sala Sistemas
  */
 @Entity
-public class Asignatura {
-    @Id
+@NamedQueries({
+    @NamedQuery(name ="Asignatura.buscarPorCodigo" , query="SELECT a FROM Asignatura a WHERE a.codigo = :codigo"),
+    @NamedQuery(name = "Asignatura.buscarPorEscuela",
+            query= "SELECT a FROM Asignatura a WHERE a.codigo LIKE :prefijo ORDER BY a.codigo ASC")
+        
+})
+public class Asignatura extends AbstractEntity{
+    
+    
+    @Column(nullable= false, unique= true, length= 7)
     private String codigo;
+    
+    @Column(nullable = false, length = 150, unique = false)
     private String nombre;
+    
+    @Column(nullable = false)
     private byte creditos;
+    
+    @Column(nullable = false)
     private byte intensidad;
+    
     
     
     public Asignatura(){ 
@@ -49,6 +67,10 @@ public class Asignatura {
         return intensidad;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
@@ -63,6 +85,10 @@ public class Asignatura {
 
     public void setIntensidad(byte intensidad) {
         this.intensidad = intensidad;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
     
    

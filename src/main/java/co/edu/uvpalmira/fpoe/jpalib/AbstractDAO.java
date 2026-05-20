@@ -169,5 +169,5 @@ public abstract class AbstractDAO<T extends AbstractEntity> implements Serializa
             this.edit(entity);
         }
     }
-
+ 
 }
