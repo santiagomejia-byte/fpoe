@@ -13,6 +13,7 @@ import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import java.io.Serializable;
 import java.sql.SQLIntegrityConstraintViolationException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -23,15 +24,18 @@ import java.util.logging.Logger;
 @Named(value = "asignCtrl")
 @SessionScoped
 public class ControladorAsignatura implements Serializable {
-    // joder 
 
-    private Asignatura asignatura = new Asignatura("750014C", "FPOE", (byte) 3, (byte) 3);
+    private Asignatura asignatura = new Asignatura();
 
     @Inject
     private ILogica logica;
 
     public Asignatura getAsignatura() {
         return asignatura;
+    }
+
+    public List<Asignatura> getAsignaturas() {
+        return this.logica.buscarAsignaturas();
     }
 
     public void guardar() {
@@ -50,4 +54,8 @@ public class ControladorAsignatura implements Serializable {
         }
     }
 
+    public void cancelar() {
+        this.asignatura = new Asignatura();
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Proceso canelado"));
+    }
 }
